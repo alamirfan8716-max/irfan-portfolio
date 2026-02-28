@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Irfan Alam | Graphic Designer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0a192f;
+    color: #ffffff;
+}
+
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: #112240;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 42px;
+}
+
+header p {
+    color: #ccd6f6;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    background: #1f6feb;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #0d47a1;
+}
+
+section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+h2 {
+    border-bottom: 2px solid #1f6feb;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.skills span {
+    display: inline-block;
+    background: #112240;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #1f6feb;
+}
+
+.gallery {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 260px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.contact {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #112240;
+    color: #8892b0;
+}
+
+/* Lightbox */
+#lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    text-align: center;
+}
+
+#lightbox img {
+    margin-top: 5%;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+#lightbox span {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
+    cursor: pointer;
+    color: white;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Irfan Alam</h1>
+    <p>Creative & Professional Graphic Designer</p>
+    <a href="#contact" class="btn">Hire Me</a>
+</header>
+
+<section>
+    <h2>About Me</h2>
+    <p>
+        Hello! I'm Irfan Alam, a passionate graphic designer with expertise in branding,
+        logo design, social media creatives, and print media. I create modern,
+        impactful, and visually appealing designs that help brands grow.
+    </p>
+</section>
+
+<section>
+    <h2>Professional Skills</h2>
+    <div class="skills">
+        <span>Adobe Photoshop</span>
+        <span>Adobe Illustrator</span>
+        <span>Adobe InDesign</span>
+        <span>CorelDRAW</span>
+        <span>Logo Design</span>
+        <span>Brand Identity</span>
+        <span>Social Media Creatives</span>
+        <span>Print Design</span>
+    </div>
+</section>
+
+<section>
+    <h2>Portfolio</h2>
+    <div class="gallery">
+        <img src="logo1.jpg" onclick="showImage(this)">
+        <img src="logo2.jpg" onclick="showImage(this)">
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact">
+        <p>Email: alamirfan8716@gmail.com</p>
+        <p>WhatsApp: +91-9930821254</p>
+
+        <a href="mailto:alamirfan8716@gmail.com" class="btn">Send Email</a>
+        <br><br>
+
+        <a href="https://wa.me/919930821254" class="btn">Chat on WhatsApp</a>
+        <br><br>
+
+        <a href="https://instagram.com/alal.irfan" class="btn" target="_blank">Instagram</a>
+        <br><br>
+
+        <a href="https://facebook.com/IrfanAlam" class="btn" target="_blank">Facebook</a>
+    </div>
+</section>
+
+<footer>
+    © 2026 Irfan Alam | All Rights Reserved
+</footer>
+
+<div id="lightbox">
+    <span onclick="closeImage()">&times;</span>
+    <img id="lightbox-img">
+</div>
+
+<script>
+function showImage(imgElement) {
+    document.getElementById("lightbox").style.display = "block";
+    document.getElementById("lightbox-img").src = imgElement.src;
+}
+
+function closeImage() {
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
+</body>
+</html>
